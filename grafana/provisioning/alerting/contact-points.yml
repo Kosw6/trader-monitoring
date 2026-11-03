@@ -1,0 +1,13 @@
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: lambda-soft-recovery
+    receivers:
+      - uid: lambda-soft-recovery
+        type: webhook
+        settings:
+          # deploy.ps1 실행 후 출력된 Function URL 로 교체
+          url: "https://REPLACE_WITH_LAMBDA_FUNCTION_URL"
+          httpMethod: POST
+        disableResolveMessage: true
